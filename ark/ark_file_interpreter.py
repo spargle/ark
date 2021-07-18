@@ -1,6 +1,7 @@
 def iptt(inn):
   fie = inn
-fie = input('File path: ')
+def ipt():
+  fie = input('File path: ')
 f = open(fie, 'r')
 l = str(f.readlines()).strip("['']")
 print(l)
