@@ -3,7 +3,7 @@
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Usage
 
- - `:`  Terminates the program. | Required
+ - `:`  Terminates the program. | **Required**
 
 - `!`  **Output**s the next Alphanumeric character in the code. | **Output**
 
