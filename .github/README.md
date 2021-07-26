@@ -15,17 +15,17 @@
 
 - `<`  Asks for **Input** and adds it to the stack. (the only way to add multiple digits to the same row) | **Input**/**Stack Manipulation**
 
-- `+`  Add the top two rows in the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `+`  Add the top two rows in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
-- `-`  Subtract the second row by the top row in the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `-`  Subtract the second row by the top row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
-- `*`  Multiply the top two rows of the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `*`  Multiply the top two rows of the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
-- `)`  Subtract the top row by the second row in the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `)`  Subtract the top row by the second row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
-- `/`  Divide the top row by the second row in the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `/`  Divide the top row by the second row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
-- `(`  Divide the second row by the top row in the stack and add the result to the stack. | Math/**Stack Manipulation**
+- `(`  Divide the second row by the top row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
 - `#`  Clear the stack. | **Stack Manipulation**
 
