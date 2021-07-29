@@ -32,6 +32,9 @@
 - `$`  Add a random number in between the top row and the second row in the stack. | **Stack Manipulation**
 
 - `%`  Add a random number in between the second row and the top row in the stack. | **Stack Manipulation**
+- `{` Used to initialize a function. (like python's: "def") | **Functions**
+- `}` Used to end the initialization of a function. | **Functions**
+- `~` Used to call a function. | **Functions**
 ### examples:
 #### A Hello World program:
 `!H !e !l !l !o !  !W !o !r !l !d:`
