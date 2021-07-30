@@ -4,15 +4,15 @@
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Usage
 
- - `:`  Terminates the program. | **Required**
+ - `:` Terminates the program. | **Required**
 
-- `!`  **Output**s the next Alphanumeric character in the code. | **Output**
+- `!`  Outputs the next Alphanumeric character in the code. | **Output**
 
-- `^`  **Output**s the stack. | **Output**
+- `^`  Outputs the stack. | **Output**
 
 - `>`  Adds the next numeric character to the stack. | **Stack Manipulation**
 
-- `<`  Asks for **Input** and adds it to the stack. (the only way to add multiple digits to the same row) | **Input**/**Stack Manipulation**
+- `<`  Asks for Input and adds it to the stack. (the only way to add multiple digits to the same row) | **Input**/**Stack Manipulation**
 
 - `+`  Add the top two rows in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 
@@ -34,12 +34,16 @@
 - `{` Used to initialize a function. (like python's: "def") | **Functions**
 - `}` Used to end the initialization of a function. | **Functions**
 - `~` Used to call a function. | **Functions**
-### examples:
+### Examples:
 #### A Hello World program:
 `!H !e !l !l !o !  !W !o !r !l !d:`
-#### prints `Hello World`
+##### Each character is individually read then printed
+#### Prints `Hello World`
 #### Mathematics:
 `>1>1+^:`
-#### prints: `112`
-
-#### No other examples have been created.
+##### Adds 1 to the stack twice, then adds the sum of the top two digits in the stack to the top of the stack, resulting in 1, 1, 2.
+#### Prints: `112`
+#### Infinite loop¹:
+`{~}~:`
+##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
+###### ¹there may be a recursion limit depending on the IDE and/or compiler
