@@ -43,7 +43,7 @@
 `>1>1+^:`
 ##### Adds 1 to the stack twice, then adds the sum of the top two digits in the stack to the top of the stack, resulting in 1, 1, 2.
 #### Prints: `112`
-#### Infinite loop¹:
+#### Infinite loop:
 `{~}~:`
 ##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
 ###### ¹there may be a recursion limit depending on the IDE and/or compiler
