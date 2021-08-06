@@ -24,16 +24,17 @@
 - `[` Used to initialize a multiple-character addition. | **Stack Manipulation**
 - `]` Used to end the initialization of a multiple-character addition. | **Stack Manipulation**
 - `~` Used to call a function. | **Functions**
+### note: when printing a string like this: `!B !L !A !H`, you must put a space in between each character.
 ### Examples:
 #### A Hello World program:
-`!H !e !l !l !o !  !W !o !r !l !d:`
+`@!H !e !l !l !o !  !W !o !r !l !d:`
 ##### Each character is individually read then printed
 #### Prints `Hello World`
 #### Mathematics:
-`>1>1+^:`
+`@>1>1+^:`
 ##### Adds 1 to the stack twice, then adds the sum of the top two digits in the stack to the top of the stack, resulting in 1, 1, 2.
 #### Prints: `112`
 #### Infinite loop:
-`{~}~:`
+`@{~}~:`
 ##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
 ###### ¹there may be a recursion limit depending on the IDE and/or compiler
