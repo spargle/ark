@@ -44,8 +44,9 @@ def run(x):
       elif ip[ai] == '$': astack.append(r.randint(int(astack[0]), int(astack[1])))
       elif ip[ai] == '%': astack.append(r.randint(int(astack[1]), int(astack[0])))
       elif ip[ai] == '~': print(innerexec(sfunc))
-      elif l[i] == '[': exec("""while l[i] != ']':\n mul.append(l[i])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); stack.append(int(smul))
+      elif ip[ai] == '[': exec("""while l[i] != ']':\n mul.append(l[i])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); stack.append(int(smul))
       ai += 1
+      
       return str(sprint).strip('[]').replace("'", '').replace(', ', '')
 
 
