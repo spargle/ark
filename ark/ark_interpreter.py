@@ -1,5 +1,6 @@
 from time import perf_counter
 import random as r
+import os
 from time import sleep
 start_time = 0
 end_time = 0
@@ -22,6 +23,8 @@ def run(x):
   ipt = ''
   mul = []
   smul = ''
+  pop = []
+  spop = ''
   l = x
   def innerexec(ip):
     astack = []
@@ -44,7 +47,7 @@ def run(x):
       elif ip[ai] == '$': astack.append(r.randint(int(astack[0]), int(astack[1])))
       elif ip[ai] == '%': astack.append(r.randint(int(astack[1]), int(astack[0])))
       elif ip[ai] == '~': print(innerexec(sfunc))
-      elif ip[ai] == '[': exec("""while ip[ai] != ']':\n mul.append(ip[ai])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); stack.append(int(smul))
+      elif ip[ai] == '[': exec("""while ip[ai] != ']':\n mul.append(ip[ai])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); astack.append(int(smul))
       ai += 1
     for x in astack:
       stack.append(x)
@@ -70,6 +73,7 @@ def run(x):
     elif l[i] == '{': exec("""\nwhile l[i] != '}':\n  func.append(l[i])\n  i += 1\n  sfunc = str(func).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n""")
     elif l[i] == '~': print(innerexec(sfunc))
     elif l[i] == '[': exec("""while l[i] != ']':\n mul.append(l[i])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); stack.append(int(smul))
+    elif l[i] == 'T': exec("""while l[i] != 'N':\n pop.append(l[i])\n i += 1\n global spop\n spop = str(pop).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); os.popen(spop + '&>> arkSTDOUT.txt'); arkout = open('arkSTDOUT.txt', 'a'); ss = f.read(); stack.append(ss)
     i += 1
     
     
