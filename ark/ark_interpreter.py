@@ -48,6 +48,7 @@ def run(x):
       elif ip[ai] == '%': astack.append(r.randint(int(astack[1]), int(astack[0])))
       elif ip[ai] == '~': print(innerexec(sfunc))
       elif ip[ai] == '[': exec("""while ip[ai] != ']':\n mul.append(ip[ai])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); astack.append(int(smul))
+      elif ip[ai] == 'T': exec("""while ip[ai] != 'N':\n pop.append(ip[ai])\n i += 1\n global spop\n spop = str(pop).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); os.popen(spop + '&>> arkSTDOUT.txt'); arkout = open('arkSTDOUT.txt', 'a'); ss = f.read(); astack.append(ss)
       ai += 1
     for x in astack:
       stack.append(x)
