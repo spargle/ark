@@ -1,6 +1,7 @@
 # ark
 ![logo](https://esolangs.org/w/images/c/c9/Ark_logo.png)
-![logo](https://img.shields.io/badge/beans-yes-tomato)
+![badge version](https://img.shields.io/github/manifest-json/v/spargle/ark?filename=.github%2Fmanifest.json&style=plastic)
+![beans](https://img.shields.io/badge/beans-yes-tomato)
 # The esoteric programming language that is *somewhat* useful.
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Usage
