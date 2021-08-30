@@ -31,7 +31,7 @@ def run(x):
     sprint = []
     ai = 0
     while ai != len(ip):
-      if ip[ai] == ':': ai = ai
+      if ip[ai] == ':': pass
       elif ip[ai] == '@': start_time = perf_counter()
       elif ip[ai] == '!': ai += 1; sprint.append(ip[ai]); ai += 1
       elif ip[ai] == '>': ai += 1; astack.append(ip[ai])   
