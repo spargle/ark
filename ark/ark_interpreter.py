@@ -48,7 +48,6 @@ def run(x):
       elif ip[ai] == '%': astack.append(r.randint(int(astack[1]), int(astack[0])))
       elif ip[ai] == '~': print(innerexec(sfunc))
       elif ip[ai] == '[': exec("""while ip[ai] != ']':\n mul.append(ip[ai])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); astack.append(int(smul))
-      elif ip[ai] == 'T': exec("""while ip[ai] != 'N':\n pop.append(ip[ai])\n i += 1\n global spop\n spop = str(pop).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); os.popen(spop + '&>> arkSTDOUT.txt'); arkout = open('arkSTDOUT.txt', 'r'); ss = arkout.read(); astack.append(ss)
       ai += 1
     for x in astack:
       stack.append(x)
@@ -74,7 +73,6 @@ def run(x):
     elif l[i] == '{': exec("""\nwhile l[i] != '}':\n  func.append(l[i])\n  i += 1\n  sfunc = str(func).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n""")
     elif l[i] == '~': print(innerexec(sfunc))
     elif l[i] == '[': exec("""while l[i] != ']':\n mul.append(l[i])\n i += 1\n global smul\n smul = str(mul).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); stack.append(int(smul))
-    elif l[i] == 'T': exec("""while l[i] != 'N':\n pop.append(l[i])\n i += 1\n global spop\n spop = str(pop).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n"""); os.popen(spop + '&>> arkSTDOUT.txt'); arkout = open('arkSTDOUT.txt', 'r'); ss = arkout.read(); stack.append(ss)
     i += 1
     
     
