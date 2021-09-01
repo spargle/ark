@@ -25,8 +25,6 @@
 - `[` Used to initialize a multiple-character addition. | **Stack Manipulation**
 - `]` Used to end the initialization of a multiple-character addition. | **Stack Manipulation**
 - `~` Used to call a function. | **Functions**
--  `T` Used to initialize a command. || **Command-Line Interaction**
--  `N` Used to stop the initialization of a command, then reads the result to the stack. || **Command-Line Interaction**
 ### note: when printing a string like this: `!B !L !A !H`, you must put a space in between each character.
 ### Examples:
 #### A Hello World program:
