@@ -4,6 +4,9 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge)](https://www.codefactor.io/repository/github/spargle/ark)
 ![beans](https://img.shields.io/badge/beans-yes-tomato)
 # The esoteric programming language that is *somewhat* useful.
+## install
+curl `curl -O https://github.com/spargle/ark.git`
+gh cli `gh repo clone spargle/ark`
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Usage
 - `:` Terminates the program. | **Required*
