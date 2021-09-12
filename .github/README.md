@@ -18,9 +18,7 @@ gh cli `gh repo clone spargle/ark`
 - `+`  Add the top two rows in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `-`  Subtract the second row by the top row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `*`  Multiply the top two rows of the stack and add the result to the stack. | **Math**/**Stack Manipulation**
-- `)`  Subtract the top row by the second row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `/`  Divide the top row by the second row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
-- `(`  Divide the second row by the top row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `#`  Clear the stack. | **Stack Manipulation**
 - `$`  Add a random number in between the top row and the second row in the stack. | **Stack Manipulation**
 - `{` Used to initialize a function. (like python's: "def") | **Functions**
