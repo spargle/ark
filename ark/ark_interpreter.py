@@ -38,8 +38,8 @@ def run(x):
       elif ip[ai] == '<': ipt = input('$~ input: '); astack.append(ipt)
       elif ip[ai] == '+': astack.append(int(astack[0]) + int(stack[1]))
       elif ip[ai] == '-': astack.append(int(astack[0]) - int(astack[1]))
-      elif ip[ai] == '*': astack.append(int(astack[0]) - int(astack[1]))
-      elif ip[ai] == ')': astack.append(int(astack[1]) * int(astack[0]))
+      elif ip[ai] == '*': astack.append(int(astack[0]) * int(astack[1]))
+      elif ip[ai] == ')': astack.append(int(astack[1]) - int(astack[0]))
       elif ip[ai] == '/': astack.append(int(astack[0]) / int(astack[1]))
       elif ip[ai] == '(': astack.append(int(astack[1]) / int(astack[0]))
       elif ip[ai] == '#': astack = []
@@ -62,8 +62,8 @@ def run(x):
     elif l[i] == '<': ipt = input('$~ input: '); stack.append(ipt)
     elif l[i] == '+': stack.append(int(stack[0]) + int(stack[1]))
     elif l[i] == '-': stack.append(int(stack[0]) - int(stack[1]))
-    elif l[i] == '*': stack.append(int(stack[0]) - int(stack[1]))
-    elif l[i] == ')': stack.append(int(stack[1]) * int(stack[0]))
+    elif l[i] == '*': stack.append(int(stack[0]) * int(stack[1]))
+    elif l[i] == ')': stack.append(int(stack[1]) - int(stack[0]))
     elif l[i] == '/': stack.append(int(stack[0]) / int(stack[1]))
     elif l[i] == '(': stack.append(int(stack[1]) / int(stack[0]))
     elif l[i] == '#': stack = []
