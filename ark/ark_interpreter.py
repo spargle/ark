@@ -1,6 +1,5 @@
 from time import perf_counter
 import random as r
-from time import sleep
 start_time = 0
 end_time = 0
 stack = []
