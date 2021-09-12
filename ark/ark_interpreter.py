@@ -38,9 +38,7 @@ def run(x):
       elif ip[ai] == '+': astack.append(int(astack[0]) + int(stack[1]))
       elif ip[ai] == '-': astack.append(int(astack[0]) - int(astack[1]))
       elif ip[ai] == '*': astack.append(int(astack[0]) * int(astack[1]))
-      elif ip[ai] == ')': astack.append(int(astack[1]) - int(astack[0]))
       elif ip[ai] == '/': astack.append(int(astack[0]) / int(astack[1]))
-      elif ip[ai] == '(': astack.append(int(astack[1]) / int(astack[0]))
       elif ip[ai] == '#': astack = []
       elif ip[ai] == '$': astack.append(r.randint(int(astack[0]), int(astack[1])))
       elif ip[ai] == '~': print(innerexec(sfunc))
@@ -61,9 +59,7 @@ def run(x):
     elif l[i] == '+': stack.append(int(stack[0]) + int(stack[1]))
     elif l[i] == '-': stack.append(int(stack[0]) - int(stack[1]))
     elif l[i] == '*': stack.append(int(stack[0]) * int(stack[1]))
-    elif l[i] == ')': stack.append(int(stack[1]) - int(stack[0]))
     elif l[i] == '/': stack.append(int(stack[0]) / int(stack[1]))
-    elif l[i] == '(': stack.append(int(stack[1]) / int(stack[0]))
     elif l[i] == '#': stack = []
     elif l[i] == '$': stack.append(r.randint(int(stack[0]), int(stack[1])))
     elif l[i] == '{': exec("""\nwhile l[i] != '}':\n  func.append(l[i])\n  i += 1\n  sfunc = str(func).strip('[').strip(']').replace('\\'', '').replace(', ', '').replace('[', '').replace(']', '')\n""")
