@@ -1,6 +1,5 @@
 #  ark
 ![logo](https://esolangs.org/w/images/c/c9/Ark_logo.png)
-![badge version](https://img.shields.io/github/manifest-json/v/spargle/ark?filename=.github%2Fmanifest.json)
 [![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge)](https://www.codefactor.io/repository/github/spargle/ark)
 ![beans](https://img.shields.io/badge/beans-yes-tomato)
 # The esoteric programming language that is *somewhat* useful.
