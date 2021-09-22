@@ -1,5 +1,0 @@
-fn = input('file name: ')
-f = open(fn + '.ark', 'a')
-l = input('==== ark editor ====\n')
-f.write(l)
-f.close()
