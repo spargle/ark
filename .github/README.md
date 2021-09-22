@@ -7,8 +7,11 @@
 curl `curl -O https://github.com/spargle/ark.git`
 gh cli `gh repo clone spargle/ark`
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
+### Using the interpreter:
+#### Run `ark_interpreter.py` and type in or paste the Ark source code of your project.
+#### It will look like: `$~ input: <souce code>`
 ### Usage
-- `:` Terminates the program. | **Required*
+- `:` Terminates the program. | **Required**
 - `@` Initializes the program. | **Required**
 - `!`  Outputs the next Alphanumeric character in the code. | **Output**
 - `^`  Outputs the stack. | **Output**
@@ -39,3 +42,4 @@ gh cli `gh repo clone spargle/ark`
 `@{~}~:`
 ##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
 ###### ¹there may be a recursion limit depending on the IDE and/or compiler
+#### more examples coming soon.
