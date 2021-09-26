@@ -1,5 +1,5 @@
 # Ark Docs
-## Welcome to Ark Docs! This is where you can find [example code](), [installation instructions](), and [how-to guides]().
+## Welcome to Ark Docs! This is where you can find [example code](https://github.com/spargle/ark/blob/main/.github/docs.md#example-code), [installation instructions](https://github.com/spargle/ark/blob/main/.github/docs.md#installation), and [how-to guides](https://github.com/spargle/ark/blob/main/.github/docs.md#how-to-ark).
 # Installation:
 ## Download this repository:
 ### Press the green `code⌵` button in the top right of the repo. (next to the description)
