@@ -71,4 +71,5 @@ def run(x):
 def le():
   l = input('$~ input: ')
   run(l)
-le()
+while True:
+  le()
