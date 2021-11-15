@@ -18,6 +18,7 @@ Be constructive. Don't open an issue if you are going to be:
 - rude
 - racist
 - anything that a good person wouldn't be
+
 **Help us please.**
 Explain the flaw and how to fix it.
 
