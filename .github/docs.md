@@ -79,11 +79,6 @@ $~ input: <your code goes here>
 ### The `#` instruction clears the stack.
 #### Example: `>A >B # ^` prints nothing because the `#` deleted everything on the stack.
 
-## The `$` instruction:
-### The `$` pushes a random number between the top item and the second item in the stack to the stack.
-#### Example: `>1 > 4 $` pushes 1 and 4 to the stack, then pushes 3 to the stack because it is a random number inbetween 1 and 4.
-##### The $ instruction is not cryptographically secure, nor is the Ark language itself.
-
 ## The `{, }, and ~` instructions:
 ### The `{, }, and ~` instructions are used to define and run a function. Anything inbetween the two curly brackets is ignored and not run until the `~` command is run by the interpreter.
 #### Example: `{>1} >5 ~` pushes a 5 then a 1 to the stack (the stack looks like this: `5, 1` because the 1 isnt pushed untill the `{}` function is called.).
