@@ -24,7 +24,6 @@ curl -O https://fjuhzsqmccywkdgngmmk.supabase.in/storage/v1/object/public/source
 - `*`  Multiply the top two rows of the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `/`  Divide the top row by the second row in the stack and add the result to the stack. | **Math**/**Stack Manipulation**
 - `#`  Clear the stack. | **Stack Manipulation**
-- `$`  Add a random number in between the top row and the second row in the stack. | **Stack Manipulation**
 - `{` Used to initialize a function. (like python's: "def") | **Functions**
 - `}` Used to end the initialization of a function. | **Functions** 
 - `[` Used to initialize a multiple-character addition. | **Stack Manipulation**
