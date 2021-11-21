@@ -29,10 +29,9 @@ curl -O https://fjuhzsqmccywkdgngmmk.supabase.in/storage/v1/object/public/source
 - `[` Used to initialize a multiple-character addition. | **Stack Manipulation**
 - `]` Used to end the initialization of a multiple-character addition. | **Stack Manipulation**
 - `~` Used to call a function. | **Functions**
-### note: when printing a string like this: `!B !L !A !H`, you must put a space in between each character.
 ### Examples:
 #### A Hello World program:
-`@!H !e !l !l !o !  !W !o !r !l !d:`
+`@!H!e!l!l!o! !W!o!r!l!d:`
 ##### Each character is individually read then printed
 #### Prints `Hello World`
 #### Mathematics:
