@@ -1,51 +1,28 @@
 # Ark Docs
-## Welcome to Ark Docs! This is where you can find [example code](https://github.com/spargle/ark/blob/main/.github/docs.md#example-code), [installation instructions](https://github.com/spargle/ark/blob/main/.github/docs.md#installation), and [how-to guides](https://github.com/spargle/ark/blob/main/.github/docs.md#how-to-ark).
+## Welcome to Ark Docs! This is where you can find [code instructions](https://github.com/spargle/ark/blob/main/.github/docs.md#instructions), [installation instructions](https://github.com/spargle/ark/blob/main/.github/docs.md#installation), and [how-to guides](https://github.com/spargle/ark/blob/main/.github/docs.md#how-to-ark).
 # Installation:
 ## Download this repository:
-### Press the green `code⌵` button in the top right of the repo. (next to the description)
-### Select the download option of your choice. (the `.zip` one is easiest to do)
-### Once downloaded, find the `ark` folder and open the one and only python (`.py`) file, `ark_interpreter.py`.
-## Running the interpreter:
-### Once you have `ark_interpreter.py` opened, run the file.
-### You should see `$~ compiling...` pop up, an under it: `$~ input:`.
-### The whole thing should look like this:
-```Ark CLI
-$~ compiling...
-$~ input: <your code goes here>
 ```
-### Paste or type your code where it says `$~ input:` and hit enter.
+curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
+```
+### Paste or type your code where it says `$~ Ark x.x.x:` and hit enter.
 ### It will then run your code! (It's a beautiful thing, isn't it.)
 
 # How To Ark:
 ## Open up any text editor, Atom, Google Docs, Notes, Even the Google Search Bar works.
-### At the beginning of every script, you'll want an `@`. This tells the interpreter where to start the program and what time the program is started.
-### At the end of every script, you'll want a `:`. This tells the interpreter that it should stop.
-## Lets write your first script.
-### Right now, your code will look something like this:
-### `@:`
-### Not very cool, is it.
-### Here's where the fun stuff happens though. In the middle of these two characters, there are infinite possible code combinations.
-### But for now, lets stick with the basic Hello, World program.
-### `!H !e !l !l !o !  !W !o !r !l !d`
+### The basic Hello, World program.
+### `!H!e!l!l!o! !W!o!r!l!d`
 ### Cool, huh? Each `!` is telling the interpreter that the next character will be printed to STDOUT, or be written on the screen.
 ### There is another way to do this, though. Using the Stack.
 ### The stack is a big list of numbers and characters. It is the only "variable" in Ark.
-### To push something to the stack, simply do `>a`. This will push "a" to the stack. The character after `>` can be anything that is not a Ark key character like: `!`, `@`, `#`, or any other character that is used by the interpreter. (A full list of thses characters is on the [wiki](https://esolangs.org/wiki/Ark#Ark:_The_esolang_that_is_actually_kind_of_useful.) page.)
+### To push something to the stack, simply do `>a`. This will push "a" to the stack. The character after `>` can be anything that is not a Ark key character like: `!`, `#`, or any other character that is used by the interpreter.
 ### "But, what if I want to push a number that isn't less than ten?" you may ask, well the answer is: Brackets!!!
 ### `[1873498]` pushes 1873498 to the stack! How cool!
 ### To show the output of the stack: `^`. This "prints" the stack as a big fat number.
 ## The full, stack-based Hello, World program:
-### ```@[Hello, World!] ^:```
+### ```[Hello, World!]^```
 ### Ta-Da!
-
-# Example code:
-
-## Code etiquette:
-- Start your script with a `@`
-- End your script with a `:`
-- Seperate instructions with a space
-- Eat chicken nuggets
-
+# Instructions
 ## The `!` instruction:
 ### The `!` instruction prints the next character (the character after the `!`)
 #### Example: `!A` prints "A".
