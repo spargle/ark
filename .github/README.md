@@ -13,8 +13,6 @@ curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
 #### Run `ark_interpreter.py` and type in or paste the Ark source code of your project.
 #### It will look like: `$~ input: <souce code>`
 ### Usage
-- `:` Terminates the program. | **Required**
-- `@` Initializes the program. | **Required**
 - `!`  Outputs the next Alphanumeric character in the code. | **Output**
 - `^`  Outputs the stack. | **Output**
 - `>`  Adds the next numeric character to the stack. | **Stack Manipulation**
