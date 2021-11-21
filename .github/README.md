@@ -1,17 +1,13 @@
 #  ark
 ![logo](https://esolangs.org/w/images/c/c9/Ark_logo.png)
-[![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge)](https://www.codefactor.io/repository/github/spargle/ark)
-![beans](https://img.shields.io/badge/beans-yes-tomato)
-# The esoteric programming language that is *somewhat* useful.
-## [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
+# The programming language that is *somewhat* useful.
+# [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ## install
 ```
 curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
 ```
-#### All details are also on the [esolangs.org wiki page](https://esolangs.org/wiki/ark).
 ### Using the interpreter:
-#### Run `ark_interpreter.py` and type in or paste the Ark source code of your project.
-#### It will look like: `$~ input: <souce code>`
+#### It will look like: `$~ Ark x.x.x: <souce code>`
 ### Usage
 - `!`  Outputs the next Alphanumeric character in the code. | **Output**
 - `^`  Outputs the stack. | **Output**
@@ -29,7 +25,7 @@ curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
 - `~` Used to call a function. | **Functions**
 ### Examples:
 #### A Hello World program:
-`@!H!e!l!l!o! !W!o!r!l!d:`
+`!H!e!l!l!o! !W!o!r!l!d`
 ##### Each character is individually read then printed
 #### Prints `Hello World`
 #### Mathematics:
@@ -37,7 +33,7 @@ curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
 ##### Adds 1 to the stack twice, then adds the sum of the top two digits in the stack to the top of the stack, resulting in 1, 1, 2.
 #### Prints: `112`
 #### Infinite loop:
-`@{~}~:`
+`{~}~`
 ##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
 ###### ¹there may be a recursion limit depending on the IDE and/or compiler
 #### more examples coming soon.
