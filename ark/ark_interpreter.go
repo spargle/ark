@@ -92,6 +92,12 @@ func innerexec(s string) {
             mul = strings.ReplaceAll(mul, "[]", "")
             stack[r] = mul
             r += 1
+        } else if string(s[i]) == "{" {
+            for string(s[i]) != "}" {
+                i += 1
+                fn += string(s[i])
+            }
+            fn = strings.ReplaceAll(fn, "{}", "")
         }
         i += 1
     }
