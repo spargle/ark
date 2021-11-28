@@ -13,8 +13,7 @@ func isInt(sr string) bool {
     return true
 }
 func innerexec(s string) {
-    var r = 0
-    var stack [1000]string
+    var stack = ""
     var i = 0
     var ipt = ""
     var str0 = 0
@@ -27,61 +26,47 @@ func innerexec(s string) {
             fmt.Println(string(s[i]))
         } else if string(s[i]) == ">" {
             i += 1
-            stack[r] = string(s[i])
-            r += 1
+            stack += string(s[i])
         } else if string(s[i]) == "^" {
             fmt.Println(stack)
         } else if string(s[i]) == "<" {
             fmt.Println("$~ input: ")
             fmt.Scanln(&ipt)
-            stack[r] = string(ipt)
-            r += 1
+            stack += string(ipt)
         } else if string(s[i]) == "+" {
-            if isInt(stack[0]) && isInt(stack[1]) {
+            if isInt(string(stack[0])) && isInt(string(stack[1])) {
                 str0, _ = strconv.Atoi(string(stack[0]))
                 str1, _ = strconv.Atoi(string(stack[1]))
-                stack[r] = string(str0 + str1)
-                r += 1
+                stack += string(str0 + str1)
             } else {
-                stack[r] = string(str0) + string(str1)
-                r += 1
+                stack += string(str0) + string(str1)
             }
         } else if string(s[i]) == "-" {
-            if isInt(stack[0]) && isInt(stack[1]) {
+            if isInt(string(stack[0])) && isInt(string(stack[1])) {
                 str0, _ = strconv.Atoi(string(stack[0]))
                 str1, _ = strconv.Atoi(string(stack[1]))
-                stack[r] = string(str0 - str1)
-                r += 1
+                stack += string(str0 - str1)
             } else {
-                stack[r] = "nil"
-                r += 1
+                stack += "."
             }
         } else if string(s[i]) == "/" {
-            if isInt(stack[0]) && isInt(stack[1]) {
+            if isInt(string(stack[0])) && isInt(string(stack[1])) {
                 str0, _ = strconv.Atoi(string(stack[0]))
                 str1, _ = strconv.Atoi(string(stack[1]))
-                stack[r] = string(str0 / str1)
-                r += 1
+                stack += string(str0 / str1)
             } else {
-                stack[r] = "nil"
-                r += 1
+                stack += "."
             }
         } else if string(s[i]) == "*" {
-            if isInt(stack[0]) && isInt(stack[1]) {
+            if isInt(string(stack[0])) && isInt(string(stack[1])) {
                 str0, _ = strconv.Atoi(string(stack[0]))
                 str1, _ = strconv.Atoi(string(stack[1]))
-                stack[r] = string(str0 * str1)
-                r += 1
+                stack += string(str0 * str1)
             } else {
-                stack[r] = "nil"
-                r += 1
+                stack += "."
             }
         } else if string(s[i]) == "#" {
-            var rm = 0
-            for rm != 1000 {
-                stack[rm] = ""
-                rm += 1
-            }
+            stack = ""
         } else if string(s[i]) == "~" {
             innerexec(fn)
         } else if string(s[i]) == "[" {
@@ -90,8 +75,7 @@ func innerexec(s string) {
                 mul += string(s[i])
             }
             mul = strings.ReplaceAll(mul, "[]", "")
-            stack[r] = mul
-            r += 1
+            stack += mul
         } else if string(s[i]) == "{" {
             for string(s[i]) != "}" {
                 i += 1
@@ -104,7 +88,7 @@ func innerexec(s string) {
 }
 func main() {
     var see = ""
-    fmt.Println("$~ Ark 1.8.0")
+    fmt.Println("$~ Ark 1.8.4")
     fmt.Scanln(&see)
     innerexec(see)
 }
