@@ -88,7 +88,7 @@ func innerexec(s string) {
 }
 func main() {
     var see = ""
-    fmt.Println("$~ Ark 1.8.4")
+    fmt.Println("$~ Ark 1.8.5")
     fmt.Scanln(&see)
     innerexec(see)
 }
