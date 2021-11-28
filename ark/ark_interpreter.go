@@ -14,7 +14,7 @@ func isInt(sr string) bool {
 }
 func innerexec(s string) {
     var r = 0
-    var stack [1000]string
+    var stack []string
     var i = 0
     var ipt = ""
     var str0 = 0
