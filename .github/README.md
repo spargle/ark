@@ -1,4 +1,4 @@
-![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo.png)
+![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo%20small.png)
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ### ![img](https://github.com/spargle/shards/blob/main/.github/container_small.svg)
