@@ -5,7 +5,7 @@
 [![shards](https://github-readme-stats.vercel.app/api/pin/?username=spargle&repo=shards)](https://github.com/spargle/shards)
 ## install
 ```
-curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
+curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Ark/ark.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
