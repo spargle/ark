@@ -1,4 +1,4 @@
-![img](https://github.com/spargle/shards/blob/main/.github/container.svg)
+![img](https://github.com/spargle/ark/blob/main/shards/.github-shards/container.svg)
 # Shards
 ## A sandboxed container for Ark scripts and their stacks.
 ### Install:
