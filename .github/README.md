@@ -1,7 +1,6 @@
 ![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo.png)
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
-### ![img](https://github.com/spargle/shards/blob/main/.github/container_small.svg)
 ## install
 ```
 curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Ark/ark.zip
