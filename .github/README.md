@@ -2,7 +2,6 @@
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ### ![img](https://github.com/spargle/shards/blob/main/.github/container_small.svg)
-[![shards](https://github-readme-stats.vercel.app/api/pin/?username=spargle&repo=shards)](https://github.com/spargle/shards)
 ## install
 ```
 curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Ark/ark.zip
