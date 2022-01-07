@@ -12,6 +12,22 @@ func isInt(sr string) bool {
     }
     return true
 }
+func as(ip string) string {
+    t := 0
+    nn := ""
+    if string(ip[0]) == "." {
+        t += 1
+        for string(ip[t]) != "." {
+            nn += string(ip[t])
+            t += 1
+        }
+        nn = strings.ReplaceAll(nn, ".", "")
+    }
+    if string(ip[0]) != "." {
+        nn = string(ip)
+    }
+    return nn
+}
 func innerexec(s string) {
     var stack = ""
     var i = 0
@@ -87,8 +103,17 @@ func innerexec(s string) {
     }
 }
 func main() {
+    fmt.Print("\033[H\033[2J")
     var see = ""
-    fmt.Println("$~ Ark 1.8.5")
-    fmt.Scanln(&see)
-    innerexec(see)
+    fmt.Println("$~ Ark 1.9.0\n")
+    for {
+        fmt.Print("ark 1.9.0 > ")
+        fmt.Scanln(&see)
+        if see == "clear" {
+            fmt.Print("\033[H\033[2J")
+        }
+        if see != "clear" {
+            innerexec(see)
+        }
+    }
 }
