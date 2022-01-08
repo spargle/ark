@@ -23,6 +23,7 @@ func isInt(sr string) bool {
 func innerexec(s string) {
     var stack = ""
     var i = 0
+    var ipt = ""
     var str0 = 0
     var str1 = 0
     var fn = ""
@@ -30,14 +31,16 @@ func innerexec(s string) {
     for i != len(s) {
         if string(s[i]) == "!" {
             i += 1
-            out += string(s[i]) + "\n"
-            out1 += string(s[i]) + "\n"
+            fmt.Println(string(s[i]))
         } else if string(s[i]) == ">" {
             i += 1
             stack += string(s[i])
         } else if string(s[i]) == "^" {
-            out += stack
-            out1 += stack
+            fmt.Println(stack)
+        } else if string(s[i]) == "<" {
+            fmt.Println("$~ input: ")
+            fmt.Scanln(&ipt)
+            stack += string(ipt)
         } else if string(s[i]) == "+" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
                 str0, _ = strconv.Atoi(string(stack[0]))
