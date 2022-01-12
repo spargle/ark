@@ -8,7 +8,7 @@ import (
 var (
     ipt = ""
     instances = ""
-    version = "1.0.0"
+    version = "1.2.0"
     out = ""
     out1 = ""
 )
@@ -104,7 +104,7 @@ func new_instance(name string) {
 }
 func main() {
     fmt.Print("\033[H\033[2J")
-	fmt.Println("Shards 1.0.0\nType \"help\" or \"license\" to get started.")
+	fmt.Println("Shards 1.2.0\nType \"help\" or \"license\" to get started.")
     for {
         fmt.Print("dev/terminal/usr > ")
         fmt.Scanln(&ipt)
@@ -117,7 +117,7 @@ func main() {
         } else if ipt == "version" {
             fmt.Println(version)
         } else if ipt == "ark" {
-            fmt.Print("Ark 1.8.4 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
+            fmt.Print("Ark 1.9.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
             innerexec(ipt)
             fmt.Println(out1)
