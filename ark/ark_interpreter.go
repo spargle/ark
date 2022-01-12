@@ -20,7 +20,6 @@ func innerexec(s string) {
     var str1 = 0
     var fn = ""
     var mul = ""
-    var fi = ""
     for i != len(s) {
         if string(s[i]) == "!" {
             i += 1
