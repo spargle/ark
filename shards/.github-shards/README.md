@@ -28,10 +28,15 @@ Easy
 ```
 `view` see the output of all instances
 ```
-[BETA]
-pretty violent
+Easy
 ```
 `clear` clear the "terminal"
 ```
 Easy
+```
+`debug` show debug data
+```
+x.x.x
+
+| - name @ x.x.x
 ```
