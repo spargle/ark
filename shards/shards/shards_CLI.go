@@ -122,6 +122,7 @@ func main() {
             innerexec(ipt)
             fmt.Println(out1)
             out1 = ""
+            out += out1
         } else if ipt == "new" {
             fmt.Println("Name of new instance: ")
             fmt.Scanln(&ipt)
@@ -134,6 +135,8 @@ func main() {
             fmt.Print("\033[H\033[2J")
         } else if ipt == "view" {
             fmt.Println(out)
+        } else if ipt == "debug" {
+            fmt.Println(version + "\n" + out + "\n" + instances + "\n")
         }
     }
 }
