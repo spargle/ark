@@ -8,7 +8,7 @@ import (
 var (
     ipt = ""
     instances = ""
-    version = "1.2.0"
+    version = "1.2.1"
     out = ""
     out1 = ""
 )
@@ -31,14 +31,14 @@ func innerexec(s string) {
     for i != len(s) {
         if string(s[i]) == "!" {
             i += 1
-            fmt.Println(string(s[i]))
+            out += string(s[i])
         } else if string(s[i]) == ">" {
             i += 1
             stack += string(s[i])
         } else if string(s[i]) == "^" {
-            fmt.Println(stack)
+            out += stack
         } else if string(s[i]) == "<" {
-            fmt.Println("$~ input: ")
+            out += "$~ input: "
             fmt.Scanln(&ipt)
             stack += string(ipt)
         } else if string(s[i]) == "+" {
@@ -98,13 +98,13 @@ func new_instance(name string) {
     fmt.Println("New instance initialized...")
     fmt.Println("\"" + name + "\" finished loading.")
     instances += string("| - " + name + " @ " + version + "\n")
-    fmt.Println("Ark 1.8.5 in \"dev/terminal/instance_editor\"\nShards internal Ark code editor\ndev/terminal/instance_editor $~ ")
+    fmt.Println("Ark 1.8.9 in \"dev/terminal/instance_editor\"\nShards internal Ark code editor\ndev/terminal/instance_editor $~ ")
     fmt.Scanln(&ipt)
     go innerexec(ipt)
 }
 func main() {
     fmt.Print("\033[H\033[2J")
-	fmt.Println("Shards 1.2.0\nType \"help\" or \"license\" to get started.")
+	fmt.Println("Shards 1.2.1\nType \"help\" or \"license\" to get started.")
     for {
         fmt.Print("dev/terminal/usr > ")
         fmt.Scanln(&ipt)
@@ -117,7 +117,7 @@ func main() {
         } else if ipt == "version" {
             fmt.Println(version)
         } else if ipt == "ark" {
-            fmt.Print("Ark 1.9.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
+            fmt.Print("Ark 1.8.9 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
             innerexec(ipt)
             fmt.Println(out1)
