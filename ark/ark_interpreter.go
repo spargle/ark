@@ -1,9 +1,14 @@
 // ark_interpreter
 package main
-import "fmt"
 import "unicode"
+import "fmt"
 import "strconv"
 import "strings"
+import "math/rand"
+import "log"
+import "time"
+var runtime_tag = ""
+var Token = ""
 func isInt(sr string) bool {
     for _, c := range sr {
         if !unicode.IsDigit(c) {
@@ -12,56 +17,71 @@ func isInt(sr string) bool {
     }
     return true
 }
+func new() string{
+    Token = Tag(); time.Sleep(1 * time.Second); log.Println("runtime key\n" + Token); tk1 := Tag(); time.Sleep(1 * time.Second); tk2 := Tag(); time.Sleep(1 * time.Second); tk3 := Tag(); time.Sleep(1 * time.Second); tk4 := Tag(); jko := [5]string{tk1, tk2, Token, tk3, tk4}; res := ""; e := 0
+    for e != 5 {n := rand.Intn(5); res += jko[n]; res += "\n"; rm(jko, n); e += 1}
+    return res
+}
+func Tag() string {
+    now := time.Now(); unixNano := now.UnixNano(); umillisec := unixNano; r1:=[]rune("abc1def2ghi3klm4nop5qrs6tuv8wxy9z0"); r:=[]rune(""); stt:=""; r2:=""; i:=0
+    for i != 36 {now = time.Now(); unixNano = now.UnixNano(); umillisec = unixNano; rand.Seed(umillisec); r1 := r1[rand.Intn(len(r1))]; r2 += string(r1); i += 1}
+    r = []rune(r2); stt = ""; i = 0
+    for i != 41 {now = time.Now(); unixNano = now.UnixNano(); umillisec = unixNano; rand.Seed(umillisec); m:=r[rand.Intn(len(r))]; stt += string(m); i += 1}
+    return string(stt)
+}
+func rm(slice [5]string, s int) []string {
+    return append(slice[:s], slice[s+1:]...)
+}
 func innerexec(s string) {
     var stack = ""
     var i = 0
-    var ipt = ""
-    var str0 = 0
-    var str1 = 0
+    var it = ""
+    var s0 = 0
+    var s1 = 0
     var fn = ""
-    var mul = ""
+    var m = ""
     for i != len(s) {
         if string(s[i]) == "!" {
             i += 1
-            fmt.Println(string(s[i]))
+            log.Println(string(s[i]))
         } else if string(s[i]) == ">" {
             i += 1
             stack += string(s[i])
         } else if string(s[i]) == "^" {
-            fmt.Println(stack)
+            log.Println(stack)
         } else if string(s[i]) == "<" {
-            fmt.Println("$~ input: ")
-            fmt.Scanln(&ipt)
-            stack += string(ipt)
+            log.Println("$~ input: ")
+            fmt.Scanln(&it)
+            stack += string(it)
         } else if string(s[i]) == "+" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
-                str0, _ = strconv.Atoi(string(stack[0]))
-                str1, _ = strconv.Atoi(string(stack[1]))
-                stack += string(str0 + str1)
+                s0, _ = strconv.Atoi(string(stack[0]))
+                s1, _ = strconv.Atoi(string(stack[1]))
+                stack += string(s0 + s1)
             } else {
-                stack += string(str0) + string(str1)
+                stack += string(s0) + string(s1)
             }
         } else if string(s[i]) == "-" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
-                str0, _ = strconv.Atoi(string(stack[0]))
-                str1, _ = strconv.Atoi(string(stack[1]))
-                stack += string(str0 - str1)
+                s0, _ = strconv.Atoi(string(stack[0]))
+                s1, _ = strconv.Atoi(string(stack[1]))
+                stack += string(s0 - s1)
             } else {
                 stack += "."
             }
         } else if string(s[i]) == "/" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
-                str0, _ = strconv.Atoi(string(stack[0]))
-                str1, _ = strconv.Atoi(string(stack[1]))
-                stack += string(str0 / str1)
+                s0, _ = strconv.Atoi(string(stack[0]))
+                s1, _ = strconv.Atoi(string(stack[1]))
+                stack += string(s0 / s1)
             } else {
                 stack += "."
             }
         } else if string(s[i]) == "*" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
-                str0, _ = strconv.Atoi(string(stack[0]))
-                str1, _ = strconv.Atoi(string(stack[1]))
-                stack += string(str0 * str1)
+                s0, _ = strconv.Atoi(string(stack[0]))
+                s1, _ = strconv.Atoi(string(stack[1]))
+                stack += string(s0 * s1)
             } else {
                 stack += "."
             }
@@ -72,10 +92,10 @@ func innerexec(s string) {
         } else if string(s[i]) == "[" {
             for string(s[i]) != "]" {
                 i += 1
-                mul += string(s[i])
+                m += string(s[i])
             }
-            mul = strings.ReplaceAll(mul, "[]", "")
-            stack += mul
+            m = strings.ReplaceAll(m, "[]", "")
+            stack += m
         } else if string(s[i]) == "{" {
             for string(s[i]) != "}" {
                 i += 1
@@ -87,14 +107,17 @@ func innerexec(s string) {
 func main() {
     fmt.Print("\033[H\033[2J")
     var see = ""
-    fmt.Println("$~ Ark 1.8.9\n$~ Spargle\n$~ c) 2021\n$~all systems go\n")
+    log.Println("\n$~ Ark 1.9.0\n$~ Spargle\n$~ c) 2021\n$~ all systems go\n$~ generating runtime tag...")
+    runtime_tag = new()
+    log.Println("$~ done.")
     for {
-        fmt.Print("ark 1.8.9 > ")
+        log.Print("ark 1.9.0 > ")
         fmt.Scanln(&see)
         if see == "clear" {
-            fmt.Print("\033[H\033[2J")
+            log.Print("\033[H\033[2J")
         }
         if see != "clear" {
+
             innerexec(see)
         }
     }
