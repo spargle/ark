@@ -3,7 +3,7 @@
 # Installation:
 ## Download this repository:
 ```
-curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
+curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Ark/ark.zip
 ```
 ### Paste or type your code where it says `$~ Ark x.x.x:` and hit enter.
 ### It will then run your code! (It's a beautiful thing, isn't it.)
@@ -17,7 +17,7 @@ curl -O https://github.com/spargle/ark/blob/main/builds/ark.zip
 ### The stack is a big list of numbers and characters. It is the only "variable" in Ark.
 ### To push something to the stack, simply do `>a`. This will push "a" to the stack. The character after `>` can be anything that is not a Ark key character like: `!`, `#`, or any other character that is used by the interpreter.
 ### "But, what if I want to push a number that isn't less than ten?" you may ask, well the answer is: Brackets!!!
-### `[1873498]` pushes 1873498 to the stack! How cool!
+### `[1873498]` pushes 1, 8, 7, 3, 4, 9, and 8 to the stack! How cool!
 ### To show the output of the stack: `^`. This "prints" the stack as a big fat number.
 ## The full, stack-based Hello, World program:
 ### ```[Hello, World!]^```
