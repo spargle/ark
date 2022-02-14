@@ -33,6 +33,4 @@
 #### Prints: `112`
 #### Infinite loop:
 `{~}~`
-##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop¹.
-###### ¹there may be a recursion limit depending on the IDE and/or compiler
-#### more examples coming soon.
+##### Similar to python's `s = "exec(s)"; exec(s)` the function's code is to run itself, then the function is called, then the function is called, resulting in an infinite loop.
