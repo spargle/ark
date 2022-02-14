@@ -1,12 +1,15 @@
-// ark_interpreter
+// ark_interpreter c) 2022
 package main
-import "unicode"
-import "fmt"
-import "strconv"
-import "strings"
-import "math/rand"
-import "log"
-import "time"
+import(
+    "unicode"
+    "fmt"
+    "strconv"
+    "strings"
+    "math/rand"
+    "log"
+    "time"
+    "os"
+)
 var runtime_tag = ""
 var Token = ""
 func isInt(sr string) bool {
@@ -101,24 +104,32 @@ func innerexec(s string) {
                 i += 1
                 fn += string(s[i])
             }
+        } else if string(s[i]) == "@" {
+            if !strings.Contains(runtime_tag, Token) {
+                os.Exit(0)
+            }
         }
     }
 }
 func main() {
     fmt.Print("\033[H\033[2J")
     var see = ""
-    log.Println("\n$~ Ark 1.9.0\n$~ Spargle\n$~ c) 2021\n$~ all systems go\n$~ generating runtime tag...")
+    log.Println("\n$~ Ark 2.0.0\n$~ Spargle\n$~ c) 2022\n$~ all systems go\n$~ generating runtime tag...")
     runtime_tag = new()
     log.Println("$~ done.")
     for {
-        log.Print("ark 1.9.0 > ")
+        log.Print("ark 2.0.0 > ")
         fmt.Scanln(&see)
         if see == "clear" {
             log.Print("\033[H\033[2J")
         }
         if see != "clear" {
-
-            innerexec(see)
+                if strings.Contains(runtime_tag, Token) {
+                    fmt.Print("")
+                    innerexec(see)
+                } else if !strings.Contains(runtime_tag, Token) {
+                    log.Print("runtime stabilization failed. Please try again.")
+                }
         }
     }
 }
