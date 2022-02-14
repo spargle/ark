@@ -1,9 +1,9 @@
 ![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo.png)
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
-## install
+## install (supabase isn't working right now, so cloning the repo is the only way to get a build, or build it from the souce.)
 ```
-curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Ark/ark.zip
+(not working)
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
