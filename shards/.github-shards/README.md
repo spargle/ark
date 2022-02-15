@@ -1,9 +1,9 @@
 ![img](https://github.com/spargle/ark/blob/main/shards/.github-shards/container.svg)
 # Shards
 ## A sandboxed container for Ark scripts and their stacks.
-### Install:
+### Install: (supabase isn't working right now, so cloning the repo is the only way to get a build, or build it from the souce.)
 ```
-curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Shards/shards_1.3.0.zip
+(not working)
 ```
 ### Commands:
 `help` help on commands
@@ -14,7 +14,7 @@ curl -O https://ffcgytupxhgxsidfzvbe.supabase.in/storage/v1/object/public/zip/Sh
 | - instance_name @ x.x.x
 | - instance_name @ x.x.x
 ```
-`ark` a mini Ark interpreter
+`ark` a mini Ark 1.9.0 interpreter (not 2.0.0, runtime stability is built into the instance infrastructure anyway)
 ```
 It's just Ark.
 ```
