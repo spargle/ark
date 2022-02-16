@@ -1,4 +1,5 @@
 ![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo.png)
+[![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge/main)](https://www.codefactor.io/repository/github/spargle/ark/overview/main)
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ## install (supabase isn't working right now, so cloning the repo is the only way to get a build, or build it from the souce.)
