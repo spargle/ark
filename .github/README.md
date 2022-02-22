@@ -2,9 +2,9 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge/main)](https://www.codefactor.io/repository/github/spargle/ark/overview/main)
 # The programming language that is *somewhat* useful.
 # [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
-## install (supabase isn't working right now, so cloning the repo is the only way to get a build, or build it from the souce.)
+## install
 ```
-(not working)
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/ark.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
