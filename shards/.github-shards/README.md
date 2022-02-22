@@ -1,9 +1,9 @@
 ![img](https://github.com/spargle/ark/blob/main/shards/.github-shards/container.svg)
 # Shards
 ## A sandboxed container for Ark scripts and their stacks.
-### Install: (supabase isn't working right now, so cloning the repo is the only way to get a build, or build it from the souce.)
+### Install:
 ```
-(not working)
+https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.3.0.zip
 ```
 ### Commands:
 `help` help on commands
