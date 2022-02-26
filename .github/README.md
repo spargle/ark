@@ -1,7 +1,6 @@
 ![logo](https://github.com/spargle/ark/blob/main/.github/ark%20logo.png)
 [![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge/main)](https://www.codefactor.io/repository/github/spargle/ark/overview/main)
 # The programming language that is *somewhat* useful.
-# [Docs](https://github.com/spargle/ark/blob/main/.github/docs.md)
 ## install
 ```
 curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/ark.zip
