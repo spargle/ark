@@ -23,7 +23,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 - `[` Used to initialize a multiple-character addition. | **Stack Manipulation**
 - `]` Used to end the initialization of a multiple-character addition. | **Stack Manipulation**
 - `~` Used to call a function. | **Functions**
-- `@` Stops the program if a runtime stability chech fails. | **Runtime Stability **
+- `@` Stops the program if a runtime stability chech fails. | **Runtime Stability**
 ### Examples:
 #### A Hello World program:
 `!H!e!l!l!o! !W!o!r!l!d`
