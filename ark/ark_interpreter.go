@@ -108,6 +108,8 @@ func innerexec(s string) {
             if !strings.Contains(runtime_tag, Token) {
                 os.Exit(0)
             }
+        } else if string(s[i]) == "%" {
+            go innerexec(fn)
         }
     }
 }
