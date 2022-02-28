@@ -41,7 +41,9 @@ func isInt(sr string) bool {
     }
     return true
 }
-func innerexec(s string) {
+func innerexec(s string, name string) {
+    instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | good"))
+    instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | good"))
     var stack = ""
     var i = 0
     var it = ""
@@ -77,6 +79,8 @@ func innerexec(s string) {
                 stack += string(s0 - s1)
             } else {
                 stack += "."
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | bad"))
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | bad"))
             }
         } else if string(s[i]) == "/" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
@@ -85,6 +89,8 @@ func innerexec(s string) {
                 stack += string(s0 / s1)
             } else {
                 stack += "."
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | bad"))
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | bad"))
             }
         } else if string(s[i]) == "*" {
             if isInt(string(stack[0])) && isInt(string(stack[1])) {
@@ -93,11 +99,13 @@ func innerexec(s string) {
                 stack += string(s0 * s1)
             } else {
                 stack += "."
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | bad"))
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | bad"))
             }
         } else if string(s[i]) == "#" {
             stack = ""
         } else if string(s[i]) == "~" {
-            innerexec(fn)
+            innerexec(fn, name)
         } else if string(s[i]) == "[" {
             for string(s[i]) != "]" {
                 i += 1
@@ -113,6 +121,8 @@ func innerexec(s string) {
         } else if string(s[i]) == "@" {
             if !strings.Contains(runtime_tag, Token) {
                 os.Exit(0)
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | failing"))
+                instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | failing"))
             }
         }
     }
@@ -123,7 +133,7 @@ func new_instance(name string) {
     instances += string("| - " + name + " @ " + version + "\n")
     fmt.Println("Ark 1.9.0 in \"dev/terminal/instance_editor\"\nShards internal Ark code editor\ndev/terminal/instance_editor $~ ")
     fmt.Scanln(&ipt)
-    go innerexec(ipt)
+    go innerexec(ipt, name)
 }
 func main() {
     fmt.Print("\033[H\033[2J")
@@ -142,7 +152,7 @@ func main() {
         } else if ipt == "ark" {
             fmt.Print("Ark 1.9.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
-            innerexec(ipt)
+            innerexec(ipt, "internal")
             fmt.Println(out1)
             out1 = ""
             out += out1
@@ -153,13 +163,15 @@ func main() {
         } else if ipt == "rm" {
             fmt.Println("Name of instance to remove:")
             fmt.Scanln(&ipt)
-            instances = strings.ReplaceAll(instances, string("| - " + ipt + " @ " + version + "\n"), "")
+            instances = strings.ReplaceAll(instances, string("| - " + ipt + " @ " + version + " | good"), "")
+            instances = strings.ReplaceAll(instances, string("| - " + ipt + " @ " + version + " | bad"), "")
+            instances = strings.ReplaceAll(instances, string("| - " + ipt + " @ " + version + " | failing"), "")
         } else if ipt == "clear" {
             fmt.Print("\033[H\033[2J")
         } else if ipt == "view" {
             fmt.Println(out)
         } else if ipt == "debug" {
             fmt.Println(version + "\n" + out + "\n" + instances + "\n")
-        }
+        } 
     }
 }
