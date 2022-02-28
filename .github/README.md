@@ -2,8 +2,13 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/spargle/ark/badge/main)](https://www.codefactor.io/repository/github/spargle/ark/overview/main)
 # The programming language that is *somewhat* useful.
 ## install
+##### Ark interpreter
 ```
 curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/ark.zip
+```
+##### Shards
+```
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.4.0.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
