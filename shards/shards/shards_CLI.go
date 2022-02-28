@@ -126,6 +126,7 @@ func innerexec(s string, name string) {
             }
         }
     }
+    i += 1
 }
 func new_instance(name string) {
     fmt.Println("New instance initialized...")
@@ -137,7 +138,7 @@ func new_instance(name string) {
 }
 func main() {
     fmt.Print("\033[H\033[2J")
-	fmt.Println("Shards 1.3.0\nType \"help\" or \"license\" to get started.")
+	fmt.Println("Shards 1.4.4\nType \"help\" or \"license\" to get started.")
     for {
         fmt.Print("dev/terminal/usr > ")
         fmt.Scanln(&ipt)
@@ -150,7 +151,7 @@ func main() {
         } else if ipt == "version" {
             fmt.Println(version)
         } else if ipt == "ark" {
-            fmt.Print("Ark 1.9.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
+            fmt.Print("Ark 2.0.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
             innerexec(ipt, "internal")
             fmt.Println(out1)
@@ -172,6 +173,6 @@ func main() {
             fmt.Println(out)
         } else if ipt == "debug" {
             fmt.Println(version + "\n" + out + "\n" + instances + "\n")
-        } 
+        }
     }
 }
