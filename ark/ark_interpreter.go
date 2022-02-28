@@ -110,7 +110,10 @@ func innerexec(s string) {
             }
         } else if string(s[i]) == "%" {
             go innerexec(fn)
+        } else if string(s[i]) == "" {
+
         }
+        i += 1
     }
 }
 func main() {
