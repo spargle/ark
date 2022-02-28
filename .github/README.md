@@ -8,7 +8,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 ```
 ##### Shards
 ```
-curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.4.0.zip
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.4.4.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
