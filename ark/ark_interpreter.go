@@ -9,9 +9,19 @@ import(
     "log"
     "time"
     "os"
+    "net/http"
 )
 var runtime_tag = ""
 var Token = ""
+func serve(ds string, port string) {
+    http.HandleFunc(ds, func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintf(w, ds)
+    })
+
+
+    fmt.Printf("Starting server at port " + port + "\n")
+    http.ListenAndServe(string(":" + port), nil)
+}
 func isInt(sr string) bool {
     for _, c := range sr {
         if !unicode.IsDigit(c) {
@@ -38,7 +48,9 @@ func rm(slice [5]string, s int) []string {
 func innerexec(s string) {
     var stack = ""
     var i = 0
+    var ds = ""
     var it = ""
+    var pt = ""
     var s0 = 0
     var s1 = 0
     var fn = ""
@@ -110,8 +122,20 @@ func innerexec(s string) {
             }
         } else if string(s[i]) == "%" {
             go innerexec(fn)
-        } else if string(s[i]) == "" {
-
+        } else if string(s[i]) == "$" {
+            ds = ""
+            pt = ""
+            i += 2
+            for string(s[i]) != ")" {
+                ds = ds + string(s[i])
+                i += 1
+            }
+            i += 2
+            for string(s[i]) != ")" {
+                pt = pt + string(s[i])
+                i += 1
+            }
+            serve(ds, string("409" + pt))
         }
         i += 1
     }
@@ -119,11 +143,11 @@ func innerexec(s string) {
 func main() {
     fmt.Print("\033[H\033[2J")
     var see = ""
-    log.Println("\n$~ Ark 2.0.0\n$~ Spargle\n$~ c) 2022\n$~ all systems go\n$~ generating runtime tag...")
+    log.Println("\n$~ Ark 2.2.0\n$~ Spargle\n$~ c) 2022\n$~ all systems go\n$~ generating runtime tag...")
     runtime_tag = new()
     log.Println("$~ done.")
     for {
-        log.Print("ark 2.0.0 > ")
+        log.Print("ark 2.2.0 > ")
         fmt.Scanln(&see)
         if see == "clear" {
             log.Print("\033[H\033[2J")
