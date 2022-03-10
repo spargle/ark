@@ -8,26 +8,16 @@ import (
     "log"
     "time"
     "os"
-    "net/http"
 )
 var (
     ipt = ""
     instances = ""
-    version = "1.4.0"
+    version = "1.5.1"
     out = ""
     out1 = ""
 )
 var runtime_tag = ""
 var Token = ""
-func serve(ds string, port string) {
-    http.HandleFunc(ds, func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintf(w, ds)
-    })
-
-
-    fmt.Printf("Starting server at port " + port + "\n")
-    http.ListenAndServe(string(":" + port), nil)
-}
 func new() string{
     Token = Tag(); time.Sleep(1 * time.Second); log.Println("runtime key\n" + Token); tk1 := Tag(); time.Sleep(1 * time.Second); tk2 := Tag(); time.Sleep(1 * time.Second); tk3 := Tag(); time.Sleep(1 * time.Second); tk4 := Tag(); jko := [5]string{tk1, tk2, Token, tk3, tk4}; res := ""; e := 0
     for e != 5 {n := rand.Intn(5); res += jko[n]; res += "\n"; rm(jko, n); e += 1}
@@ -56,8 +46,6 @@ func innerexec(s string, name string) {
     instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | good"))
     var stack = ""
     var i = 0
-    var pt = ""
-    var ds = ""
     var it = ""
     var s0 = 0
     var s1 = 0
@@ -136,22 +124,6 @@ func innerexec(s string, name string) {
                 instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | failing"))
                 instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | failing"))
             }
-        } else if string(s[i]) == "$" {
-            ds = ""
-            pt = ""
-            i += 2
-            for string(s[i]) != ")" {
-                ds = ds + string(s[i])
-                i += 1
-            }
-            i += 2
-            for string(s[i]) != ")" {
-                pt = pt + string(s[i])
-                i += 1
-            }
-            serve(ds, string("409" + pt))
-            instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | good"))
-            instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | good"))
         }
     }
     i += 1
@@ -166,7 +138,7 @@ func new_instance(name string) {
 }
 func main() {
     fmt.Print("\033[H\033[2J")
-	fmt.Println("Shards 1.5.0\nType \"help\" or \"license\" to get started.")
+	fmt.Println("Shards 1.5.1\nType \"help\" or \"license\" to get started.")
     for {
         fmt.Print("dev/terminal/usr > ")
         fmt.Scanln(&ipt)
@@ -175,11 +147,11 @@ func main() {
         } else if ipt == "help" {
             fmt.Println("go to the github repo for a full help section\nType help for this screen\nType license for the license\nType version for the current version of Shards\nType instances for a list of current instances running\nType ark for a mini Ark interpreter\nType new to create a new instance\nType rm to remove an instance by name\nType view to see the output of all instances\nType clear to clear the \"terminal\"")
         } else if ipt == "license" {
-            fmt.Println("just dont sell itg\nor claim it as your own\nbecause if you do\ni will eat spaghetti\nand be sad at you")
+            fmt.Println("just dont sell it\nor claim it as your own\nbecause if you do\ni will eat spaghetti\nand be sad at you")
         } else if ipt == "version" {
             fmt.Println(version)
         } else if ipt == "ark" {
-            fmt.Print("Ark 2.2.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
+            fmt.Print("Ark 2.2.1 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
             innerexec(ipt, "internal")
             fmt.Println(out1)
