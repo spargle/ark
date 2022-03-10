@@ -3,7 +3,7 @@
 ## A sandboxed container for Ark scripts and their stacks.
 ### Install:
 ```
-curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.0.zip
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.1.zip
 ```
 ### Commands:
 `help` help on commands
@@ -14,7 +14,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 | - instance_name @ x.x.x
 | - instance_name @ x.x.x
 ```
-`ark` a mini Ark 1.9.0 interpreter (not 2.0.0, runtime stability is built into the instance infrastructure anyway)
+`ark` a mini Ark interpreter
 ```
 It's just Ark.
 ```
