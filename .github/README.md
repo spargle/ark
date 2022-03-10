@@ -8,7 +8,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 ```
 ##### Shards
 ```
-curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.0.zip
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.1.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
@@ -29,7 +29,6 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 - `~` Used to call a function. | **Functions**
 - `` ` `` Used to execute a function alongside the main program | **Functions**
 - `@` Stops the program if a runtime stability chech fails. | **Runtime Stability**
-- `$(ending)(5)` Starts server at shardport `5` and adds the `/ending` to the URL and prints it to the server page like `https://localhost:4095/ending`. shardports are hosted at port 409 + 5 or whatever is in the second parenthesis after `$` | **Server**
 ### Examples:
 #### A Hello World program:
 `!H!e!l!l!o! !W!o!r!l!d`
