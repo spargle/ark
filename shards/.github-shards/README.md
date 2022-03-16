@@ -3,7 +3,7 @@
 ## A sandboxed container for Ark scripts and their stacks.
 ### Install:
 ```
-curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.1.zip
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_2.0.0.zip
 ```
 ### Commands:
 `help` help on commands
