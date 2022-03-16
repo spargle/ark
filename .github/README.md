@@ -8,7 +8,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 ```
 ##### Shards
 ```
-curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_1.5.1.zip
+curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds/shards_2.0.0.zip
 ```
 ### Using the interpreter:
 #### It will look like: `$~ Ark x.x.x: <souce code>`
@@ -29,6 +29,7 @@ curl -O https://xnxrijmguoktvvhvbpth.supabase.in/storage/v1/object/public/builds
 - `~` Used to call a function. | **Functions**
 - `` ` `` Used to execute a function alongside the main program | **Functions**
 - `@` Stops the program if a runtime stability chech fails. | **Runtime Stability**
+- `(param1==param2)` If statment. If param1 is `==, !=, <=, >=` to param2, then execute the function. | **Functions**
 ### Examples:
 #### A Hello World program:
 `!H!e!l!l!o! !W!o!r!l!d`
