@@ -12,7 +12,7 @@ import (
 var (
     ipt = ""
     instances = ""
-    version = "1.5.1"
+    version = "2.0.0"
     out = ""
     out1 = ""
 )
@@ -47,6 +47,8 @@ func innerexec(s string, name string) {
     var stack = ""
     var i = 0
     var it = ""
+    var param1 = ""
+    var param2 = ""
     var s0 = 0
     var s1 = 0
     var fn = ""
@@ -124,6 +126,45 @@ func innerexec(s string, name string) {
                 instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | good"), string("| - " + name + " @ " + version + " | failing"))
                 instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | failing"))
             }
+        } else if string(s[i]) == "(" {
+            param1 = ""
+            param2 = ""
+            i += 1
+            for string(s[i]) != "!" && string(s[i + 1]) != "=" && string(s[i]) != "=" && string(s[i + 1]) != "=" && string(s[i]) != "<" && string(s[i + 1]) != "=" && string(s[i]) != ">" && string(s[i + 1]) != "=" {
+                param1 += string(s[i])
+                i += 1
+            }
+            i += 2
+            for string(s[i]) != ")" {
+                param2 += string(s[i])
+                i += 1
+            }
+            for string(s[i]) != "=" {
+                i -= 1
+            }
+            i -= 1
+            if string(s[i]) != "!" {
+                if param1 != param2 {
+                    innerexec(fn, name)
+                }
+            }
+            if string(s[i]) != "=" {
+                if param1 == param2 {
+                    innerexec(fn, name)
+                }
+            }
+            if string(s[i]) != "<" {
+                if param1 <= param2 {
+                    innerexec(fn, name)
+                }
+            }
+            if string(s[i]) != ">" {
+                if param1 >= param2 {
+                    innerexec(fn, name)
+                }
+            }
+            instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | failing"), string("| - " + name + " @ " + version + " | good"))
+            instances = strings.ReplaceAll(instances, string("| - " + name + " @ " + version + " | bad"), string("| - " + name + " @ " + version + " | good"))
         }
     }
     i += 1
@@ -132,13 +173,13 @@ func new_instance(name string) {
     fmt.Println("New instance initialized...")
     fmt.Println("\"" + name + "\" finished loading.")
     instances += string("| - " + name + " @ " + version + "\n")
-    fmt.Println("Ark 2.2.0 in \"dev/terminal/instance_editor\"\nShards internal Ark code editor\ndev/terminal/instance_editor $~ ")
+    fmt.Println("Ark 2.5.0 in \"dev/terminal/instance_editor\"\nShards internal Ark code editor\ndev/terminal/instance_editor $~ ")
     fmt.Scanln(&ipt)
     go innerexec(ipt, name)
 }
 func main() {
     fmt.Print("\033[H\033[2J")
-	fmt.Println("Shards 1.5.1\nType \"help\" or \"license\" to get started.")
+	fmt.Println("Shards 2.0.0\nType \"help\" or \"license\" to get started.")
     for {
         fmt.Print("dev/terminal/usr > ")
         fmt.Scanln(&ipt)
@@ -151,7 +192,7 @@ func main() {
         } else if ipt == "version" {
             fmt.Println(version)
         } else if ipt == "ark" {
-            fmt.Print("Ark 2.2.1 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
+            fmt.Print("Ark 2.5.0 in \"dev/terminal/usr/ark\"\nShards internal mini-runner\ndev/terminal/usr/ark $~ ")
             fmt.Scanln(&ipt)
             innerexec(ipt, "internal")
             fmt.Println(out1)
