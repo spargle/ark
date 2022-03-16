@@ -43,6 +43,8 @@ func innerexec(s string) {
     var s1 = 0
     var fn = ""
     var m = ""
+    var param1 = ""
+    var param2 = ""
     for i != len(s) {
         if string(s[i]) == "!" {
             i += 1
@@ -110,17 +112,54 @@ func innerexec(s string) {
             }
         } else if string(s[i]) == "%" {
             go innerexec(fn)
+        } else if string(s[i]) == "(" {
+            param1 = ""
+            param2 = ""
+            i += 1
+            for string(s[i]) != "!" && string(s[i + 1]) != "=" && string(s[i]) != "=" && string(s[i + 1]) != "=" && string(s[i]) != "<" && string(s[i + 1]) != "=" && string(s[i]) != ">" && string(s[i + 1]) != "=" {
+                param1 += string(s[i])
+                i += 1
+            }
+            i += 2
+            for string(s[i]) != ")" {
+                param2 += string(s[i])
+                i += 1
+            }
+            for string(s[i]) != "=" {
+                i -= 1
+            }
+            i -= 1
+            if string(s[i]) != "!" {
+                if param1 != param2 {
+                    innerexec(fn)
+                }
+            }
+            if string(s[i]) != "=" {
+                if param1 == param2 {
+                    innerexec(fn)
+                }
+            }
+            if string(s[i]) != "<" {
+                if param1 <= param2 {
+                    innerexec(fn)
+                }
+            }
+            if string(s[i]) != ">" {
+                if param1 >= param2 {
+                    innerexec(fn)
+                }
+            }
         }
     }
 }
 func main() {
     fmt.Print("\033[H\033[2J")
     var see = ""
-    log.Println("\n$~ Ark 2.2.1\n$~ Spargle\n$~ c) 2022\n$~ all systems go\n$~ generating runtime tag...")
+    log.Println("\n$~ Ark 2.5.0\n$~ Spargle\n$~ c) 2022\n$~ all systems go\n$~ generating runtime tag...")
     runtime_tag = new()
     log.Println("$~ done.")
     for {
-        log.Print("ark 2.2.1 > ")
+        log.Print("ark 2.5.0 > ")
         fmt.Scanln(&see)
         if see == "clear" {
             log.Print("\033[H\033[2J")
